@@ -12,21 +12,18 @@ pip3 install hashers
 
 
 ```bash
-def enc_password(password: str, algorithm: str)  -> str
-def enc_password_with_salt(password: str, salt: str, algorithm: str)  -> str
-def chk_password(password: str, enc_password: str) -> bool
+def hashpw(password: str, algorithm: str)  -> str
+def hashpw_with_salt(password: str, salt: str, algorithm: str)  -> str
+def chk_password(password: str, hashpw: str) -> bool
 ```
 
 ### Examples
 
 ```python
->> from hashers import enc_password, enc_password_with_salt, chk_password
->> encoded_pass_1 = enc_password("password123", "bcrypt")
->> print(encoded_pass_1)
->> 'bcrypt$$2b$12$8ThKQUSmaZmRtRUzPcUPxu1DyK.JugtxgLKHGnoI7YaLHQRONBbeK'
->> encoded_pass_2 = enc_password_with_salt("password123", "sdpql", "bcrypt")
->> chk_password("password123", encoded_pass_1)
->> True
+>> from hashers import hashpw, hashpw_with_salt, chk_password
+>> encoded_pass_1 = hashpw("password123", "blake2")
+>> encoded_pass_2 = hashpw_with_salt("password123", "sdpql", "blake2")
+>> chk_password(encoded_pass_1, "password123")
 ```
 
 ### Available algorithms:

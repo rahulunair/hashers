@@ -1,6 +1,6 @@
 [package]
 name = "hashers"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["unrahul <rahulunair@gmail.com>"]
 edition = "2018"
 description = "A fast UUID generator for Python using Rust"

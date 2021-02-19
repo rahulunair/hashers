@@ -9,11 +9,11 @@ fn ruuid(_py: Python, m: &PyModule) -> PyResult<()> {
     fn chk_password(_py: Python, password: &str, encoded: &str) -> PyResult<bool> {
         Ok(check_password(password, encoded).unwrap())
     }
-    #[pyfn(m, "enc_password")]
+    #[pyfn(m, "hashpw")]
     // encode a password with algorithm
     // // available algorithms = argon2, bcrypt, bcrypt_sha256,
     // // pbkdf2_sha1, pbkdf2
-    fn enc_password(_py: Python, password: &str, algorithm: &str) -> PyResult<String> {
+    fn hashpw(_py: Python, password: &str, algorithm: &str) -> PyResult<String> {
         let encoded = match algorithm {
             "argon2" => make_password_with_algorithm(password, Algorithm::Argon2),
             "bcrypt" => make_password_with_algorithm(password, Algorithm::BCrypt),
@@ -24,11 +24,11 @@ fn ruuid(_py: Python, m: &PyModule) -> PyResult<()> {
         };
         Ok(encoded)
     }
-    #[pyfn(m, "enc_password_with_salt")]
+    #[pyfn(m, "hashpw_with_salt")]
     // encode a password with a salt and algorithm
     // // available algorithms = argon2, bcrypt, bcrypt_sha256,
     // // pbkdf2_sha1, pbkdf2
-    fn enc_password_with_salt(
+    fn hashpw_with_salt(
         _py: Python,
         password: &str,
         salt: &str,
