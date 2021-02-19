@@ -11,7 +11,7 @@ pip3 install hashers
 ### Available APIs
 
 
-```bash
+```python
 def hashpw(password: str, algorithm: str)  -> str
 def hashpw_with_salt(password: str, salt: str, algorithm: str)  -> str
 def chk_password(password: str, hashpw: str) -> bool
