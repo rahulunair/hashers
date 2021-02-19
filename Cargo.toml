@@ -1,0 +1,19 @@
+[package]
+name = "hashers"
+version = "0.1.0"
+authors = ["unrahul <rahulunair@gmail.com>"]
+edition = "2018"
+description = "A fast UUID generator for Python using Rust"
+readme = "README.md"
+documentation = "https://github.com/rahulunair/hashers/README.md"
+license = "BSD-3-Clause"
+keywords = ["uuid", "hash", "password"]
+
+[lib]
+name = "hashers"
+crate-type = ["cdylib"]
+
+
+[dependencies]
+djangohashers = "1.4.0"
+pyo3 = { version = "0.13.2", features = ["extension-module"] }
