@@ -16,4 +16,4 @@ crate-type = ["cdylib"]
 
 [dependencies]
 djangohashers = "1.4.0"
-pyo3 = { version = "0.13.2", features = ["extension-module"] }
+pyo3 = { version = "0.13.2", features = ["abi3-py36", "extension-module"] }
