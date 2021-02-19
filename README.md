@@ -1,6 +1,6 @@
 ## Hashers
 
-A password encoding/hasing library for Python using Djangohashers Rust crate.
+A password encoding/hasing library for Python using [Djangohashers](https://github.com/racum/rust-djangohashers) Rust crate.
 
 ## Installation
 
