@@ -1,9 +1,9 @@
 [package]
 name = "hashers"
-version = "0.2.0"
+version = "0.2.1"
 authors = ["unrahul <rahulunair@gmail.com>"]
 edition = "2018"
-description = "A fast UUID generator for Python using Rust"
+description = "Password hashing library in Python using Rust backend "
 readme = "README.md"
 documentation = "https://github.com/rahulunair/hashers/README.md"
 license = "BSD-3-Clause"
