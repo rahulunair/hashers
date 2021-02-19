@@ -88,7 +88,7 @@ jobs:
         python-version: 3.6
     - name: Build Wheels
       run: |
-        echo 'curl --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain nightly
+        echo 'curl --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable
         source ~/.cargo/env
         export PATH=/opt/python/cp38-cp38/bin:$PATH
         pip install maturin
