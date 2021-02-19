@@ -2,6 +2,12 @@
 
 A password encoding/hasing library for Python using Djangohashers Rust crate.
 
+## Installation
+
+```bash
+pip3 install hashers
+```
+
 ### Available APIs
 
 
